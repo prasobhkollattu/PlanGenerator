@@ -21,6 +21,8 @@ public class PlansController implements GeneratePlanApi {
 	@Override
 	public ResponseEntity<RepaymentPlans> preCalculateRepaymentPlans(@Valid LoanDetails body) {
 		// TODO Auto-generated method stub
+		
+		System.out.println(body);
 		return null;
 	}
 
