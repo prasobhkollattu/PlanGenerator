@@ -3,6 +3,7 @@ package com.lendico.plangenerator.contollers;
 import javax.validation.Valid;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.lendico.plangenerator.apis.GeneratePlanApi;
 import com.lendico.plangenerator.models.LoanDetails;
@@ -14,7 +15,7 @@ import com.lendico.plangenerator.models.RepaymentPlans;
  * @author Prasobh Kollattu
  *
  */
-
+@RestController
 public class PlansController implements GeneratePlanApi {
 
 	@Override

@@ -37,38 +37,13 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>io.swagger</groupId>
-			<artifactId>swagger-codegen-cli</artifactId>
-			<version>2.1.2</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.squareup.okhttp</groupId>
-			<artifactId>okhttp</artifactId>
-			<version>2.7.5</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.threeten</groupId>
 			<artifactId>threetenbp</artifactId>
 			<version>1.4.0</version>
-		</dependency>
-		<dependency>
-			<groupId>io.gsonfire</groupId>
-			<artifactId>gson-fire</artifactId>
-			<version>1.8.3</version>
-		</dependency>
-		<dependency>
-			<groupId>com.squareup.okhttp</groupId>
-			<artifactId>logging-interceptor</artifactId>
-			<version>2.7.5</version>
-		</dependency>
-		<dependency>
-			<groupId>com.github.joschi.jackson</groupId>
-			<artifactId>jackson-datatype-threetenbp</artifactId>
-			<version>2.6.4</version>
 		</dependency>
 		<dependency>
 			<groupId>io.springfox</groupId>
@@ -90,8 +65,10 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
+							<generateSupportingFiles>false</generateSupportingFiles>
 							<configOptions>
-								<dateLibrary>java8</dateLibrary>
+								<interfaceOnly>true</interfaceOnly>
+								 <dateLibrary>java8</dateLibrary>
 							</configOptions>
 							<inputSpec>${project.basedir}/src/main/resources/plangenerator.yaml</inputSpec>
 							<language>spring</language>
