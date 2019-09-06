@@ -1,3 +1,5 @@
 # Swagger Codegen Ignore
+
 README.md
 pom.xml
+/src/main/java/io/swagger/Swagger2SpringBoot.java
