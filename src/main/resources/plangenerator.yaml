@@ -1,0 +1,124 @@
+swagger: "2.0"
+info:
+  description: "In order to inform borrowers about the final repayment schedule, 
+thi serviuce will doe pre-calculated repayment plans throughout the lifetime of a loan  This spec defines the ` PlanGeneratorService`. Consumers  should statisfy
+    service contract to access the APIs.Please refer <b>request</b> and
+    <b>response</b> section of each service to identify the contract. Also
+    clients need to send `Basic auth` and `Clinet Id` for authentication"
+  version: "1.0.0"
+  title: "PlanGenerator"
+  termsOfService: "http://lendico.io/terms/"
+  contact:
+    email: "info@lendico.com"
+host: "localhost"
+basePath: "/v1"
+tags:
+- name: "PlanGenerator"
+  description: "Services to pre-calculate repayment plans throughout the lifetime of a loan"
+  externalDocs:
+    description: "Find out more"
+    url: "http://swagger.io"
+- name: "plan"
+  description: "plan generator"
+schemes:
+- "https"
+- "http"
+paths:
+  /generate-plan:
+    post:
+      tags:
+      - "plan"
+      summary: "pre-calculated repayment plans throughout the lifetime of a loan"
+      description: ""
+      operationId: "preCalculateRepaymentPlans"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      security:
+        - ClientId: []
+        - BasicAuth: []
+      parameters:
+      - in: "body"
+        name: "body"
+        description: " Loan Details for generating pre-calculated repayment plans"
+        required: true
+        schema:
+          $ref: "#/definitions/LoanDetails"
+      responses:
+        200:
+          description: successful
+          schema:
+                $ref: '#/definitions/RepaymentPlans' 
+        400:
+          description: "The given input has not the right format"
+        401:
+           description: "Unauthorized"
+        500:
+           description: "Internal server error"
+  
+    
+securityDefinitions:
+  ClientId:
+    type: apiKey
+    name: clientId
+    in: header
+  BasicAuth:    
+      type: basic
+ 
+definitions:
+
+
+  LoanDetails:
+    type: "object"
+    properties:
+      loanAmount:
+        type: "number"
+        format: "float"
+      nominalRate:
+        type: "number"
+        format: "float"
+      duration:
+        type: "integer"
+        format: "int32"
+      startDate:
+        type: "string"
+        format: "date-time"
+    required:
+      - loanAmount
+      - nominalRate
+      - duration
+      - startDate 
+  
+  RepaymentPlans:
+    properties:
+      repaymentPlans:
+        type: array
+        items:
+          $ref: '#/definitions/RepaymentPlan' 
+          
+  RepaymentPlan:
+    properties:
+      borrowerPaymentAmount:
+       type: number
+       format: "float"
+      date:
+        type: "string"
+        format: "date-time"
+      initialOutstandingPrincipal:
+        type: number
+        format: "float"
+      interest:
+         type: number
+         format: "float"
+      principal:  
+         type: number
+         format: "float"
+      remainingOutstandingPrincipal:
+           type: number
+           format: "float"
+  
+      
+      
+      
+      
