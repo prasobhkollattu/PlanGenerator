@@ -16,18 +16,18 @@ How to run the project?
 -  Run using maven:  
       -  Install Maven 3.6.2  
       -  Open command prompt and navigate to clone directory and Execute command mvn spring-boot:run  
-3.Run using docker  
-      a. Install docker  
-      b. Open command prompt and navigate to clone directory and Execute command docker build -f Dockerfile -t plangenerator .  
-      c. docker run -p 8080:8080 plangenerator  
+- Run using docker  
+      -  Install docker  
+      -  Open command prompt and navigate to clone directory and Execute command docker build -f Dockerfile -t plangenerator .  
+      -  docker run -p 8080:8080 plangenerator  
       
 Service URL :  
 http://localhost:8080/v1/generate-plan  
 
 Service is basic auth protected:  
 Credentials (username:password format):  
-1.user:password  
-2,admin:admin  
+- user:password  
+- admin:admin  
      
 
 
