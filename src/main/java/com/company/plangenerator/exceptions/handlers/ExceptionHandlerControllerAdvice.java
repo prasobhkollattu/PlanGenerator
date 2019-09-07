@@ -1,4 +1,4 @@
-package com.lendico.plangenerator.exceptions.handlers;
+package com.company.plangenerator.exceptions.handlers;
 
 import java.time.LocalDateTime;
 
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.lendico.plangenerator.contollers.util.Messages;
-import com.lendico.plangenerator.exceptions.PlanGeneratorException;
-import com.lendico.plangenerator.exceptions.models.ExceptionResponse;
+import com.company.plangenerator.contollers.util.Messages;
+import com.company.plangenerator.exceptions.PlanGeneratorException;
+import com.company.plangenerator.exceptions.models.ExceptionResponse;
 
 /**
  * 

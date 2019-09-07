@@ -1,8 +1,8 @@
-package com.lendico.plangenerator.exceptions;
+package com.company.plangenerator.exceptions;
 
 import java.time.LocalDateTime;
 
-import com.lendico.plangenerator.exceptions.models.ExceptionResponse;
+import com.company.plangenerator.exceptions.models.ExceptionResponse;
 
 public class PlanGeneratorException extends RuntimeException {
 

@@ -3,10 +3,10 @@
  * https://github.com/swagger-api/swagger-codegen
  * Do not edit the class manually.
  */
-package com.lendico.plangenerator.apis;
+package com.company.plangenerator.apis;
 
-import com.lendico.plangenerator.models.LoanDetails;
-import com.lendico.plangenerator.models.RepaymentPlans;
+import com.company.plangenerator.models.LoanDetails;
+import com.company.plangenerator.models.RepaymentPlans;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.*;
 import org.slf4j.Logger;

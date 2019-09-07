@@ -1,4 +1,4 @@
-package com.lendico.plangenerator.exceptions.models;
+package com.company.plangenerator.exceptions.models;
 
 public class ExceptionResponse {
 	private String timestamp;

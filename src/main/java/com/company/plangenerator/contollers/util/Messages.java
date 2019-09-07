@@ -1,4 +1,4 @@
-package com.lendico.plangenerator.contollers.util;
+package com.company.plangenerator.contollers.util;
 
 public interface Messages {
 	String INVALID_REQUEST = "Invalid Request";

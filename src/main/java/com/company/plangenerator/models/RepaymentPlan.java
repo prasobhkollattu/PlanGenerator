@@ -1,4 +1,4 @@
-package com.lendico.plangenerator.models;
+package com.company.plangenerator.models;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;

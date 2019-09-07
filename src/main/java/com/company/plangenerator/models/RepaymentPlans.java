@@ -1,9 +1,10 @@
-package com.lendico.plangenerator.models;
+package com.company.plangenerator.models;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.company.plangenerator.models.RepaymentPlan;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.lendico.plangenerator.models.RepaymentPlan;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.lendico.plangenerator.contollers;
+package com.company.plangenerator.contollers;
 
 import javax.validation.Valid;
 
@@ -7,10 +7,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lendico.plangenerator.apis.GeneratePlanApi;
-import com.lendico.plangenerator.models.LoanDetails;
-import com.lendico.plangenerator.models.RepaymentPlans;
-import com.lendico.plangenerator.services.PlanGeneratorService;
+import com.company.plangenerator.apis.GeneratePlanApi;
+import com.company.plangenerator.models.LoanDetails;
+import com.company.plangenerator.models.RepaymentPlans;
+import com.company.plangenerator.services.PlanGeneratorService;
 
 /**
  * controller to handle reinstallment plans

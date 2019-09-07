@@ -1,4 +1,4 @@
-package com.lendico.plangenerator.exceptions;
+package com.company.plangenerator.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

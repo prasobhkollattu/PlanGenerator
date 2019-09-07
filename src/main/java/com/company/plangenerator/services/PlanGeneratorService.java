@@ -1,4 +1,4 @@
-package com.lendico.plangenerator.services;
+package com.company.plangenerator.services;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -11,10 +11,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.lendico.plangenerator.contollers.util.Constants;
-import com.lendico.plangenerator.models.LoanDetails;
-import com.lendico.plangenerator.models.RepaymentPlan;
-import com.lendico.plangenerator.models.RepaymentPlans;
+import com.company.plangenerator.contollers.util.Constants;
+import com.company.plangenerator.models.LoanDetails;
+import com.company.plangenerator.models.RepaymentPlan;
+import com.company.plangenerator.models.RepaymentPlans;
 
 /**
  * Service to handle PlanGenerator

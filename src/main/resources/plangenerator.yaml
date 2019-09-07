@@ -1,124 +1,110 @@
-swagger: "2.0"
+swagger: '2.0'
 info:
-  description: "In order to inform borrowers about the final repayment schedule, 
-thi serviuce will doe pre-calculated repayment plans throughout the lifetime of a loan  This spec defines the ` PlanGeneratorService`. Consumers  should statisfy
-    service contract to access the APIs.Please refer <b>request</b> and
-    <b>response</b> section of each service to identify the contract. Also
-    clients need to send `Basic auth` and `Clinet Id` for authentication"
-  version: "1.0.0"
-  title: "PlanGenerator"
-  termsOfService: "http://lendico.io/terms/"
+  description: In order to inform borrowers about the final repayment schedule, thi serviuce will doe pre-calculated repayment plans throughout the lifetime of a loan  This spec defines the ` PlanGeneratorService`. Consumers  should statisfy service contract to access the APIs.Please refer <b>request</b> and <b>response</b> section of each service to identify the contract. Also clients need to send `Basic auth` and `Clinet Id` for authentication
+  version: 1.0.0
+  title: PlanGenerator
+  termsOfService: http://company.io/terms/
   contact:
-    email: "info@lendico.com"
-host: "localhost"
-basePath: "/v1"
+    email: info@company.com
+host: localhost
+basePath: /v1
 tags:
-- name: "PlanGenerator"
-  description: "Services to pre-calculate repayment plans throughout the lifetime of a loan"
+- name: PlanGenerator
+  description: Services to pre-calculate repayment plans throughout the lifetime of a loan
   externalDocs:
-    description: "Find out more"
-    url: "http://swagger.io"
-- name: "plan"
-  description: "plan generator"
+    description: Find out more
+    url: http://swagger.io
+- name: plan
+  description: plan generator
 schemes:
-- "https"
-- "http"
+- https
+- http
 paths:
   /generate-plan:
     post:
       tags:
-      - "plan"
-      summary: "pre-calculated repayment plans throughout the lifetime of a loan"
-      description: ""
-      operationId: "preCalculateRepaymentPlans"
+      - plan
+      summary: pre-calculated repayment plans throughout the lifetime of a loan
+      description: ''
+      operationId: preCalculateRepaymentPlans
       consumes:
-      - "application/json"
+      - application/json
       produces:
-      - "application/json"
+      - application/json
       security:
-        - ClientId: []
-        - BasicAuth: []
+      - ClientId: [
+          ]
+      - BasicAuth: [
+          ]
       parameters:
-      - in: "body"
-        name: "body"
-        description: " Loan Details for generating pre-calculated repayment plans"
+      - in: body
+        name: body
+        description: ' Loan Details for generating pre-calculated repayment plans'
         required: true
         schema:
-          $ref: "#/definitions/LoanDetails"
+          $ref: '#/definitions/LoanDetails'
       responses:
         200:
           description: successful
           schema:
-                $ref: '#/definitions/RepaymentPlans' 
+            $ref: '#/definitions/RepaymentPlans'
         400:
-          description: "The given input has not the right format"
+          description: The given input has not the right format
         401:
-           description: "Unauthorized"
+          description: Unauthorized
         500:
-           description: "Internal server error"
-  
-    
+          description: Internal server error
 securityDefinitions:
   ClientId:
     type: apiKey
     name: clientId
     in: header
-  BasicAuth:    
-      type: basic
- 
+  BasicAuth:
+    type: basic
 definitions:
-
-
   LoanDetails:
-    type: "object"
+    type: object
     properties:
       loanAmount:
-        type: "number"
-        format: "double"
+        type: number
+        format: double
       nominalRate:
-        type: "number"
-        format: "double"
+        type: number
+        format: double
       duration:
-        type: "integer"
-        format: "int32"
+        type: integer
+        format: int32
       startDate:
-        type: "string"
-        format: "date-time"
+        type: string
+        format: date-time
     required:
-      - loanAmount
-      - nominalRate
-      - duration
-      - startDate 
-  
+    - loanAmount
+    - nominalRate
+    - duration
+    - startDate
   RepaymentPlans:
     properties:
       repaymentPlans:
         type: array
         items:
-          $ref: '#/definitions/RepaymentPlan' 
-          
+          $ref: '#/definitions/RepaymentPlan'
   RepaymentPlan:
     properties:
       borrowerPaymentAmount:
-       type: number
-       format: "double"
+        type: number
+        format: double
       date:
-        type: "string"
-        format: "date-time"
+        type: string
+        format: date-time
       initialOutstandingPrincipal:
         type: number
-        format: "double"
+        format: double
       interest:
-         type: number
-         format: "double"
-      principal:  
-         type: number
-         format: "double"
+        type: number
+        format: double
+      principal:
+        type: number
+        format: double
       remainingOutstandingPrincipal:
-           type: number
-           format: "double"
-  
-      
-      
-      
-      
+        type: number
+        format: double
