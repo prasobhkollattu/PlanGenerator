@@ -12,8 +12,8 @@ Swagger YAML is integerataed to maven build process using swagger-codegen-maven-
 
 How to run the project?    
 
-1. Clone project to a directory.  
-2. Run using maven:  
+-  Clone project to a directory.  
+-  Run using maven:  
       a. Install Maven 3.6.2  
       b. Open command prompt and navigate to clone directory and Execute command mvn spring-boot:run  
 3.Run using docker  
