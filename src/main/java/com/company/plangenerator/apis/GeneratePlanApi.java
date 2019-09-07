@@ -29,7 +29,7 @@ import javax.validation.constraints.*;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-09-07T18:35:38.073+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-09-07T18:53:45.570+02:00")
 
 @Api(value = "generate-plan", description = "the generate-plan API")
 public interface GeneratePlanApi {
@@ -49,8 +49,7 @@ public interface GeneratePlanApi {
     }
 
     @ApiOperation(value = "pre-calculated repayment plans throughout the lifetime of a loan", nickname = "preCalculateRepaymentPlans", notes = "", response = RepaymentPlans.class, authorizations = {
-        @Authorization(value = "BasicAuth"),
-        @Authorization(value = "ClientId")
+        @Authorization(value = "BasicAuth")
     }, tags={ "plan", })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "successful", response = RepaymentPlans.class),
