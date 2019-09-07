@@ -1,6 +1,6 @@
 # PlanGenerator
 
-This service can be used to pre-calculated repayment plans throughout the lifetime of a loan.  Its created using **SpringBoot** and **Java 8**.  
+This service can be used to pre-calculated repayment plans throughout the lifetime of a loan.  Its created using **Maven**,**SpringBoot** and **Java 8**.  
 
 Service spec is designed using Swagger and YAML file for the same is  src\main\resources\plangenerator.yaml  
 Please import or copy paste yaml to Swagger online IDE to see the spec.  
