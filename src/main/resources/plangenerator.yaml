@@ -1,11 +1,11 @@
 swagger: '2.0'
 info:
-  description: In order to inform borrowers about the final repayment schedule, thi serviuce will doe pre-calculated repayment plans throughout the lifetime of a loan  This spec defines the ` PlanGeneratorService`. Consumers  should statisfy service contract to access the APIs.Please refer <b>request</b> and <b>response</b> section of each service to identify the contract. Also clients need to send `Basic auth` and `Clinet Id` for authentication
+  description: In order to inform borrowers about the final repayment schedule, thi serviuce will doe pre-calculated repayment plans throughout the lifetime of a loan  This spec defines the ` PlanGeneratorService`. Consumers  should statisfy service contract to access the APIs.Please refer <b>request</b> and <b>response</b> section of each service to identify the contract. Also clients need to send `Basic auth` for authentication
   version: 1.0.0
   title: PlanGenerator
-  termsOfService: http://company.io/terms/
+  termsOfService: http://lendico.io/terms/
   contact:
-    email: info@company.com
+    email: info@lendico.com
 host: localhost
 basePath: /v1
 tags:
@@ -32,8 +32,6 @@ paths:
       produces:
       - application/json
       security:
-      - ClientId: [
-          ]
       - BasicAuth: [
           ]
       parameters:
@@ -55,10 +53,6 @@ paths:
         500:
           description: Internal server error
 securityDefinitions:
-  ClientId:
-    type: apiKey
-    name: clientId
-    in: header
   BasicAuth:
     type: basic
 definitions:
