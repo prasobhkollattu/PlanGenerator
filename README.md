@@ -1,6 +1,6 @@
 # PlanGenerator
 
-This service can be used to pre-calculated repayment plans throughout the lifetime of a loan.  Its created using **SpringBoot** and **Java 8**.  
+This service can be used to pre-calculated repayment plans throughout the lifetime of a loan.  Its created using **Maven**,**SpringBoot** and **Java 8**.  
 
 Service spec is designed using Swagger and YAML file for the same is  src\main\resources\plangenerator.yaml  
 Please import or copy paste yaml to Swagger online IDE to see the spec.  
@@ -15,16 +15,16 @@ How to run the project?
 -  Clone project to a directory.  
 -  Run using maven:  
       -   Install Maven 3.6.2  
-      -   Open command prompt and navigate to clone directory and Execute command mvn spring-boot:run  
+      -   Open command prompt and navigate to clone directory and Execute command **mvn org.springframework.boot:spring-boot-maven-plugin:run** 
 - Run using docker  
-      -   Install docker  
-      -   Open command prompt and navigate to clone directory and Execute command docker build -f Dockerfile -t plangenerator .  
-      -   docker run -p 8080:8080 plangenerator  
+      -    Install docker  
+      -    Open command prompt and navigate to clone directory and Execute command **docker build -f Dockerfile -t plangenerator .**  
+      -    **docker run -p 8080:8080 plangenerator**  
       
 Service URL :  
 http://localhost:8080/v1/generate-plan  
 
-Service is basic auth protected:  
+**Service is basic auth protected:**   
 Credentials (username:password format):  
 -   user:password  
 -   admin:admin  
