@@ -24,7 +24,7 @@ How to run the project?
 Service URL :  
 http://localhost:8080/v1/generate-plan  
 
-Service is basic auth protected:  
+**Service is basic auth protected:** 
 Credentials (username:password format):  
 -   user:password  
 -   admin:admin  
