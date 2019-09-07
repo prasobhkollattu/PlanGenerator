@@ -26,8 +26,8 @@ http://localhost:8080/v1/generate-plan
 
 Service is basic auth protected:  
 Credentials (username:password format):  
-- user:password  
-- admin:admin  
+-   user:password  
+-   admin:admin  
      
 
 
