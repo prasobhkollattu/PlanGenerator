@@ -14,8 +14,8 @@ How to run the project?
 
 -  Clone project to a directory.  
 -  Run using maven:  
-      a. Install Maven 3.6.2  
-      b. Open command prompt and navigate to clone directory and Execute command mvn spring-boot:run  
+      -  Install Maven 3.6.2  
+      -  Open command prompt and navigate to clone directory and Execute command mvn spring-boot:run  
 3.Run using docker  
       a. Install docker  
       b. Open command prompt and navigate to clone directory and Execute command docker build -f Dockerfile -t plangenerator .  
