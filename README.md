@@ -1,4 +1,4 @@
-#PlanGenerator
+# PlanGenerator
 
 This service can be used to pre-calculated repayment plans throughout the lifetime of a loan.  Its build using SpringBoot and Java8.  
 
