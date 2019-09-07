@@ -14,28 +14,28 @@ import javax.validation.constraints.*;
  * RepaymentPlan
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-09-06T20:48:55.910+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-09-07T14:22:46.818+02:00")
 
 public class RepaymentPlan   {
   @JsonProperty("borrowerPaymentAmount")
-  private Float borrowerPaymentAmount = null;
+  private Double borrowerPaymentAmount = null;
 
   @JsonProperty("date")
   private OffsetDateTime date = null;
 
   @JsonProperty("initialOutstandingPrincipal")
-  private Float initialOutstandingPrincipal = null;
+  private Double initialOutstandingPrincipal = null;
 
   @JsonProperty("interest")
-  private Float interest = null;
+  private Double interest = null;
 
   @JsonProperty("principal")
-  private Float principal = null;
+  private Double principal = null;
 
   @JsonProperty("remainingOutstandingPrincipal")
-  private Float remainingOutstandingPrincipal = null;
+  private Double remainingOutstandingPrincipal = null;
 
-  public RepaymentPlan borrowerPaymentAmount(Float borrowerPaymentAmount) {
+  public RepaymentPlan borrowerPaymentAmount(Double borrowerPaymentAmount) {
     this.borrowerPaymentAmount = borrowerPaymentAmount;
     return this;
   }
@@ -47,11 +47,11 @@ public class RepaymentPlan   {
   @ApiModelProperty(value = "")
 
 
-  public Float getBorrowerPaymentAmount() {
+  public Double getBorrowerPaymentAmount() {
     return borrowerPaymentAmount;
   }
 
-  public void setBorrowerPaymentAmount(Float borrowerPaymentAmount) {
+  public void setBorrowerPaymentAmount(Double borrowerPaymentAmount) {
     this.borrowerPaymentAmount = borrowerPaymentAmount;
   }
 
@@ -76,7 +76,7 @@ public class RepaymentPlan   {
     this.date = date;
   }
 
-  public RepaymentPlan initialOutstandingPrincipal(Float initialOutstandingPrincipal) {
+  public RepaymentPlan initialOutstandingPrincipal(Double initialOutstandingPrincipal) {
     this.initialOutstandingPrincipal = initialOutstandingPrincipal;
     return this;
   }
@@ -88,15 +88,15 @@ public class RepaymentPlan   {
   @ApiModelProperty(value = "")
 
 
-  public Float getInitialOutstandingPrincipal() {
+  public Double getInitialOutstandingPrincipal() {
     return initialOutstandingPrincipal;
   }
 
-  public void setInitialOutstandingPrincipal(Float initialOutstandingPrincipal) {
+  public void setInitialOutstandingPrincipal(Double initialOutstandingPrincipal) {
     this.initialOutstandingPrincipal = initialOutstandingPrincipal;
   }
 
-  public RepaymentPlan interest(Float interest) {
+  public RepaymentPlan interest(Double interest) {
     this.interest = interest;
     return this;
   }
@@ -108,15 +108,15 @@ public class RepaymentPlan   {
   @ApiModelProperty(value = "")
 
 
-  public Float getInterest() {
+  public Double getInterest() {
     return interest;
   }
 
-  public void setInterest(Float interest) {
+  public void setInterest(Double interest) {
     this.interest = interest;
   }
 
-  public RepaymentPlan principal(Float principal) {
+  public RepaymentPlan principal(Double principal) {
     this.principal = principal;
     return this;
   }
@@ -128,15 +128,15 @@ public class RepaymentPlan   {
   @ApiModelProperty(value = "")
 
 
-  public Float getPrincipal() {
+  public Double getPrincipal() {
     return principal;
   }
 
-  public void setPrincipal(Float principal) {
+  public void setPrincipal(Double principal) {
     this.principal = principal;
   }
 
-  public RepaymentPlan remainingOutstandingPrincipal(Float remainingOutstandingPrincipal) {
+  public RepaymentPlan remainingOutstandingPrincipal(Double remainingOutstandingPrincipal) {
     this.remainingOutstandingPrincipal = remainingOutstandingPrincipal;
     return this;
   }
@@ -148,11 +148,11 @@ public class RepaymentPlan   {
   @ApiModelProperty(value = "")
 
 
-  public Float getRemainingOutstandingPrincipal() {
+  public Double getRemainingOutstandingPrincipal() {
     return remainingOutstandingPrincipal;
   }
 
-  public void setRemainingOutstandingPrincipal(Float remainingOutstandingPrincipal) {
+  public void setRemainingOutstandingPrincipal(Double remainingOutstandingPrincipal) {
     this.remainingOutstandingPrincipal = remainingOutstandingPrincipal;
   }
 

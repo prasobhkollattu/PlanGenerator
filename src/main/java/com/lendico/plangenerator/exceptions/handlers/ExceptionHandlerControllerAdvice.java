@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import com.lendico.plangenerator.contollers.util.Messages;
 import com.lendico.plangenerator.exceptions.PlanGeneratorException;
 import com.lendico.plangenerator.exceptions.models.ExceptionResponse;
 
@@ -36,42 +37,34 @@ public class ExceptionHandlerControllerAdvice {
 	@ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
 	public ExceptionResponse handleGeneralException(final Throwable exception, final HttpServletRequest request,
 			final HttpServletResponse res) {
-
-		ExceptionResponse error = new ExceptionResponse();
-		error.setPath(request.getRequestURI());
-		error.setMessage(exception.getMessage());
-		error.setTimestamp(LocalDateTime.now().toString());
-		error.setStatus(500);
-		error.setError("Internal Server Error");
-		return error;
+		return getExceptionResponse(exception.getMessage(), Messages.INTERNAL_SERVER_ERROR, request,
+				HttpStatus.INTERNAL_SERVER_ERROR.value());
 	}
 
 	@ExceptionHandler(HttpMediaTypeNotSupportedException.class)
 	@ResponseStatus(value = HttpStatus.BAD_REQUEST)
 	public ExceptionResponse handleHttpMediaTypeNotSupportedException(final Throwable exception,
 			final HttpServletRequest request, final HttpServletResponse res) {
-
-		ExceptionResponse error = new ExceptionResponse();
-		error.setPath(request.getRequestURI());
-		error.setMessage(exception.getMessage());
-		error.setTimestamp(LocalDateTime.now().toString());
-		error.setStatus(HttpStatus.BAD_REQUEST.value());
-		error.setError("Invalid request");
-		return error;
+		return getExceptionResponse(exception.getMessage(), Messages.INVALID_REQUEST, request,
+				HttpStatus.BAD_REQUEST.value());
 	}
 
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	@ResponseStatus(value = HttpStatus.BAD_REQUEST)
 	protected ExceptionResponse handleMethodArgumentNotValid(final MethodArgumentNotValidException exception,
 			final HttpServletRequest request, final HttpServletResponse res) {
+		return getExceptionResponse(exception.getBindingResult().toString(), Messages.INVALID_REQUEST, request,
+				HttpStatus.BAD_REQUEST.value());
+	}
 
+	private ExceptionResponse getExceptionResponse(final String errorDetails, final String errorMsg,
+			final HttpServletRequest request, int httpStatus) {
 		ExceptionResponse error = new ExceptionResponse();
 		error.setPath(request.getContextPath());
-		error.setMessage(exception.getBindingResult().toString());
+		error.setMessage(errorDetails);
 		error.setTimestamp(LocalDateTime.now().toString());
-		error.setStatus(HttpStatus.BAD_REQUEST.value());
-		error.setError("Invalid request");
-
+		error.setStatus(httpStatus);
+		error.setError(errorMsg);
 		return error;
 	}
 

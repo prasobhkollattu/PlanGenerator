@@ -50,7 +50,6 @@
 			<artifactId>springfox-swagger2</artifactId>
 			<version>2.9.2</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>
@@ -68,7 +67,7 @@
 							<generateSupportingFiles>false</generateSupportingFiles>
 							<configOptions>
 								<interfaceOnly>true</interfaceOnly>
-								 <dateLibrary>java8</dateLibrary>
+								<dateLibrary>java8</dateLibrary>
 							</configOptions>
 							<inputSpec>${project.basedir}/src/main/resources/plangenerator.yaml</inputSpec>
 							<language>spring</language>

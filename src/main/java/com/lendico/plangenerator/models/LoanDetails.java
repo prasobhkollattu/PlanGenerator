@@ -1,171 +1,162 @@
 package com.lendico.plangenerator.models;
 
-import java.time.OffsetDateTime;
 import java.util.Objects;
-
-import javax.validation.Valid;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-
-import org.springframework.validation.annotation.Validated;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
-
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.time.OffsetDateTime;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
 
 /**
  * LoanDetails
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-09-06T20:48:55.910+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-09-07T14:22:46.818+02:00")
 
-public class LoanDetails {
-	@JsonProperty("loanAmount")
-	@NotNull(message = "loanAmount cannot be empty")
-	@Min(value = 1, message = "minimum loanAmount should be  1")
-	private Float loanAmount = null;
+public class LoanDetails   {
+  @JsonProperty("loanAmount")
+  private Double loanAmount = null;
 
-	@JsonProperty("nominalRate")
-	@NotNull(message = "nominalRate cannot be empty")
-	@Min(value = 1, message = "nominalRate duration should be 1")
-	private Float nominalRate = null;
+  @JsonProperty("nominalRate")
+  private Double nominalRate = null;
 
-	@JsonProperty("duration")
-	@NotNull(message = "duration cannot be empty")
-	@Min(value = 1, message = "minimum duration should be  1")
-	private Integer duration = null;
+  @JsonProperty("duration")
+  private Integer duration = null;
 
-	@JsonProperty("startDate")
-	@NotNull(message = "startDate cannot be empty")
-	private OffsetDateTime startDate = null;
+  @JsonProperty("startDate")
+  private OffsetDateTime startDate = null;
 
-	public LoanDetails loanAmount(Float loanAmount) {
-		this.loanAmount = loanAmount;
-		return this;
-	}
+  public LoanDetails loanAmount(Double loanAmount) {
+    this.loanAmount = loanAmount;
+    return this;
+  }
 
-	/**
-	 * Get loanAmount
-	 * 
-	 * @return loanAmount
-	 **/
-	@ApiModelProperty(required = true, value = "")
-	@NotNull
+  /**
+   * Get loanAmount
+   * @return loanAmount
+  **/
+  @ApiModelProperty(required = true, value = "")
+  @NotNull
 
-	public Float getLoanAmount() {
-		return loanAmount;
-	}
 
-	public void setLoanAmount(Float loanAmount) {
-		this.loanAmount = loanAmount;
-	}
+  public Double getLoanAmount() {
+    return loanAmount;
+  }
 
-	public LoanDetails nominalRate(Float nominalRate) {
-		this.nominalRate = nominalRate;
-		return this;
-	}
+  public void setLoanAmount(Double loanAmount) {
+    this.loanAmount = loanAmount;
+  }
 
-	/**
-	 * Get nominalRate
-	 * 
-	 * @return nominalRate
-	 **/
-	@ApiModelProperty(required = true, value = "")
-	@NotNull
+  public LoanDetails nominalRate(Double nominalRate) {
+    this.nominalRate = nominalRate;
+    return this;
+  }
 
-	public Float getNominalRate() {
-		return nominalRate;
-	}
+  /**
+   * Get nominalRate
+   * @return nominalRate
+  **/
+  @ApiModelProperty(required = true, value = "")
+  @NotNull
 
-	public void setNominalRate(Float nominalRate) {
-		this.nominalRate = nominalRate;
-	}
 
-	public LoanDetails duration(Integer duration) {
-		this.duration = duration;
-		return this;
-	}
+  public Double getNominalRate() {
+    return nominalRate;
+  }
 
-	/**
-	 * Get duration
-	 * 
-	 * @return duration
-	 **/
-	@ApiModelProperty(required = true, value = "")
-	@NotNull
+  public void setNominalRate(Double nominalRate) {
+    this.nominalRate = nominalRate;
+  }
 
-	public Integer getDuration() {
-		return duration;
-	}
+  public LoanDetails duration(Integer duration) {
+    this.duration = duration;
+    return this;
+  }
 
-	public void setDuration(Integer duration) {
-		this.duration = duration;
-	}
+  /**
+   * Get duration
+   * @return duration
+  **/
+  @ApiModelProperty(required = true, value = "")
+  @NotNull
 
-	public LoanDetails startDate(OffsetDateTime startDate) {
-		this.startDate = startDate;
-		return this;
-	}
 
-	/**
-	 * Get startDate
-	 * 
-	 * @return startDate
-	 **/
-	@ApiModelProperty(required = true, value = "")
-	@NotNull
+  public Integer getDuration() {
+    return duration;
+  }
 
-	@Valid
+  public void setDuration(Integer duration) {
+    this.duration = duration;
+  }
 
-	public OffsetDateTime getStartDate() {
-		return startDate;
-	}
+  public LoanDetails startDate(OffsetDateTime startDate) {
+    this.startDate = startDate;
+    return this;
+  }
 
-	public void setStartDate(OffsetDateTime startDate) {
-		this.startDate = startDate;
-	}
+  /**
+   * Get startDate
+   * @return startDate
+  **/
+  @ApiModelProperty(required = true, value = "")
+  @NotNull
 
-	@Override
-	public boolean equals(java.lang.Object o) {
-		if (this == o) {
-			return true;
-		}
-		if (o == null || getClass() != o.getClass()) {
-			return false;
-		}
-		LoanDetails loanDetails = (LoanDetails) o;
-		return Objects.equals(this.loanAmount, loanDetails.loanAmount)
-				&& Objects.equals(this.nominalRate, loanDetails.nominalRate)
-				&& Objects.equals(this.duration, loanDetails.duration)
-				&& Objects.equals(this.startDate, loanDetails.startDate);
-	}
+  @Valid
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(loanAmount, nominalRate, duration, startDate);
-	}
+  public OffsetDateTime getStartDate() {
+    return startDate;
+  }
 
-	@Override
-	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("class LoanDetails {\n");
+  public void setStartDate(OffsetDateTime startDate) {
+    this.startDate = startDate;
+  }
 
-		sb.append("    loanAmount: ").append(toIndentedString(loanAmount)).append("\n");
-		sb.append("    nominalRate: ").append(toIndentedString(nominalRate)).append("\n");
-		sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
-		sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
-		sb.append("}");
-		return sb.toString();
-	}
 
-	/**
-	 * Convert the given object to string with each line indented by 4 spaces
-	 * (except the first line).
-	 */
-	private String toIndentedString(java.lang.Object o) {
-		if (o == null) {
-			return "null";
-		}
-		return o.toString().replace("\n", "\n    ");
-	}
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    LoanDetails loanDetails = (LoanDetails) o;
+    return Objects.equals(this.loanAmount, loanDetails.loanAmount) &&
+        Objects.equals(this.nominalRate, loanDetails.nominalRate) &&
+        Objects.equals(this.duration, loanDetails.duration) &&
+        Objects.equals(this.startDate, loanDetails.startDate);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(loanAmount, nominalRate, duration, startDate);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class LoanDetails {\n");
+    
+    sb.append("    loanAmount: ").append(toIndentedString(loanAmount)).append("\n");
+    sb.append("    nominalRate: ").append(toIndentedString(nominalRate)).append("\n");
+    sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
+    sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

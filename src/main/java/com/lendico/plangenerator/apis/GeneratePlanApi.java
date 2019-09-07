@@ -29,7 +29,7 @@ import javax.validation.constraints.*;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-09-06T20:48:55.910+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-09-07T14:22:46.818+02:00")
 
 @Api(value = "generate-plan", description = "the generate-plan API")
 public interface GeneratePlanApi {
@@ -65,7 +65,7 @@ public interface GeneratePlanApi {
         if(getObjectMapper().isPresent() && getAcceptHeader().isPresent()) {
             if (getAcceptHeader().get().contains("application/json")) {
                 try {
-                    return new ResponseEntity<>(getObjectMapper().get().readValue("{  \"repaymentPlans\" : [ {    \"borrowerPaymentAmount\" : 0.8008282,    \"date\" : \"2000-01-23T04:56:07.000+00:00\",    \"principal\" : 5.962134,    \"remainingOutstandingPrincipal\" : 5.637377,    \"interest\" : 1.4658129,    \"initialOutstandingPrincipal\" : 6.0274563  }, {    \"borrowerPaymentAmount\" : 0.8008282,    \"date\" : \"2000-01-23T04:56:07.000+00:00\",    \"principal\" : 5.962134,    \"remainingOutstandingPrincipal\" : 5.637377,    \"interest\" : 1.4658129,    \"initialOutstandingPrincipal\" : 6.0274563  } ]}", RepaymentPlans.class), HttpStatus.NOT_IMPLEMENTED);
+                    return new ResponseEntity<>(getObjectMapper().get().readValue("{  \"repaymentPlans\" : [ {    \"borrowerPaymentAmount\" : 0.8008281904610115,    \"date\" : \"2000-01-23T04:56:07.000+00:00\",    \"principal\" : 5.962133916683182,    \"remainingOutstandingPrincipal\" : 5.637376656633329,    \"interest\" : 1.4658129805029452,    \"initialOutstandingPrincipal\" : 6.027456183070403  }, {    \"borrowerPaymentAmount\" : 0.8008281904610115,    \"date\" : \"2000-01-23T04:56:07.000+00:00\",    \"principal\" : 5.962133916683182,    \"remainingOutstandingPrincipal\" : 5.637376656633329,    \"interest\" : 1.4658129805029452,    \"initialOutstandingPrincipal\" : 6.027456183070403  } ]}", RepaymentPlans.class), HttpStatus.NOT_IMPLEMENTED);
                 } catch (IOException e) {
                     log.error("Couldn't serialize response for content type application/json", e);
                     return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);

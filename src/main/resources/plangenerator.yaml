@@ -74,10 +74,10 @@ definitions:
     properties:
       loanAmount:
         type: "number"
-        format: "float"
+        format: "double"
       nominalRate:
         type: "number"
-        format: "float"
+        format: "double"
       duration:
         type: "integer"
         format: "int32"
@@ -101,22 +101,22 @@ definitions:
     properties:
       borrowerPaymentAmount:
        type: number
-       format: "float"
+       format: "double"
       date:
         type: "string"
         format: "date-time"
       initialOutstandingPrincipal:
         type: number
-        format: "float"
+        format: "double"
       interest:
          type: number
-         format: "float"
+         format: "double"
       principal:  
          type: number
-         format: "float"
+         format: "double"
       remainingOutstandingPrincipal:
            type: number
-           format: "float"
+           format: "double"
   
       
       
