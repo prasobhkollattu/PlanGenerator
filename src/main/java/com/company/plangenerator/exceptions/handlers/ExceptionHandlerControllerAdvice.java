@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -45,6 +46,14 @@ public class ExceptionHandlerControllerAdvice {
 	@ResponseStatus(value = HttpStatus.BAD_REQUEST)
 	public ExceptionResponse handleHttpMediaTypeNotSupportedException(final Throwable exception,
 			final HttpServletRequest request, final HttpServletResponse res) {
+		return getExceptionResponse(exception.getMessage(), Messages.INVALID_REQUEST, request,
+				HttpStatus.BAD_REQUEST.value());
+	}
+
+	@ExceptionHandler(HttpMessageNotReadableException.class)
+	@ResponseStatus(value = HttpStatus.BAD_REQUEST)
+	public ExceptionResponse handleDateTimeParseException(final Throwable exception, final HttpServletRequest request,
+			final HttpServletResponse res) {
 		return getExceptionResponse(exception.getMessage(), Messages.INVALID_REQUEST, request,
 				HttpStatus.BAD_REQUEST.value());
 	}

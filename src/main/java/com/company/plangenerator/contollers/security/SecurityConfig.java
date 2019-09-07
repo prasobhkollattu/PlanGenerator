@@ -12,6 +12,12 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 
+/**
+ * Credentails are in plan text format..Ideally it should be encrypted.. :)
+ * 
+ * @author PRASOBH KOLLATTU
+ *
+ */
 @Configuration
 @EnableWebSecurity
 @Order(2)
