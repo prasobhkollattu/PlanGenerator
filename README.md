@@ -47,7 +47,7 @@ http://localhost:8080/plangeneratorservice/v1/actuator/metrics
 http://localhost:8080/plangeneratorservice/v1/actuator/beans  
 http://localhost:8080/plangeneratorservice/v1/actuator/threaddump  
 
-**Caching is enabled, so same reuqest will be processed from cache.**  
+**Caching is enabled, so same request will be processed from cache.**  
 http://localhost:8080/plangeneratorservice/v1/actuator/caches  
 
 
