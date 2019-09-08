@@ -54,7 +54,7 @@ public class ExceptionHandlerControllerAdvice {
 	@ResponseStatus(value = HttpStatus.BAD_REQUEST)
 	public ExceptionResponse handleDateTimeParseException(final Throwable exception, final HttpServletRequest request,
 			final HttpServletResponse res) {
-		return getExceptionResponse(exception.getMessage(), Messages.INVALID_REQUEST, request,
+		return getExceptionResponse(exception.getMessage(), Messages.BAD_INPUT, request,
 				HttpStatus.BAD_REQUEST.value());
 	}
 
