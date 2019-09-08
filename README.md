@@ -13,10 +13,10 @@ Swagger YAML is integerataed to maven build process using swagger-codegen-maven-
 ### How to run the project?    
 
 -  Clone project to a directory.  
--  Run using maven:  
+-  **Run using maven:**  
       -   Install Maven 3.6.2  
       -   Open command prompt and navigate to clone directory and Execute command **mvn org.springframework.boot:spring-boot-maven-plugin:run** 
-- Run using docker  
+- **Run using docker**  
    -  Install docker
    -  Open command prompt and navigate to clone directory and Execute command **docker build -f Dockerfile -t plangenerator .**  
    -  *docker run -p 8080:8080 plangenerator**  
