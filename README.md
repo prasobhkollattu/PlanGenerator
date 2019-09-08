@@ -40,12 +40,14 @@ Credentials (username:password format):
 
 http://localhost:8080/plangeneratorservice/v1/actuator
 
-Imp URLs:  
+Imp Actuator URLs:  
 http://localhost:8080/plangeneratorservice/v1/actuator/health    
 http://localhost:8080/plangeneratorservice/v1/actuator/httptrace  
 http://localhost:8080/plangeneratorservice/v1/actuator/metrics  
 http://localhost:8080/plangeneratorservice/v1/actuator/beans  
 http://localhost:8080/plangeneratorservice/v1/actuator/threaddump  
+
+**Caching is enabled, so same reuqest will be processed from cache.**  
 http://localhost:8080/plangeneratorservice/v1/actuator/caches  
 
 
