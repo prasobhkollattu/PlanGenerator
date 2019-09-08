@@ -33,7 +33,7 @@ If we have some major changes and need to support both old and new service this 
 Credentials (username:password format):    
 -   user:password     
      
-**Actuator enable for monitoring and tracing:**    
+**Actuator enabled for monitoring and tracing:**    
 Credentials (username:password format):    
 -   admin:admin  
 
