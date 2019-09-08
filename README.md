@@ -38,9 +38,9 @@ Credentials (username:password format):
 -   admin:admin  
 
 
-http://localhost:8080/plangeneratorservice/v1/actuator
+http://localhost:8080/plangeneratorservice/v1/actuator  : This url will list all services available from actuator.  
 
-Imp Actuator URLs:  
+**Imp Actuator URLs:**   
 http://localhost:8080/plangeneratorservice/v1/actuator/health    
 http://localhost:8080/plangeneratorservice/v1/actuator/httptrace  
 http://localhost:8080/plangeneratorservice/v1/actuator/metrics  
@@ -53,6 +53,6 @@ http://localhost:8080/plangeneratorservice/v1/actuator/caches
 
 
 
-This url will list all services available from actuator.
+
 
 
