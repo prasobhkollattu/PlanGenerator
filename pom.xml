@@ -13,7 +13,7 @@
 	<artifactId>PlanGenerator</artifactId>
 	<version>1.0.0</version>
 	<name>PlanGenerator</name>
-	<description>PlanGenerator</description>
+	<description>Service to generate repayment plan for user loan</description>
 
 	<properties>
 		<java.version>1.8</java.version>
