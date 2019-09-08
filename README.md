@@ -52,7 +52,7 @@ http://localhost:8080/plangeneratorservice/v1/actuator/auditevents
 **Caching is enabled, so same request will be processed from cache.**  
 http://localhost:8080/plangeneratorservice/v1/actuator/caches  
 
-
+Enjoy Coding :wink:
 
 
 
