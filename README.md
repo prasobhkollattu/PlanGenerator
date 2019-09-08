@@ -24,6 +24,11 @@ How to run the project?
 Service URL :  
 http://localhost:8080/plangeneratorservice/v1/generate-plan  
 
+Application versioning is used in url and 1 in v1 stands for application major version.  
+If we have some major changes and need to support both old and new service this will help to have a new context v2. 
+
+
+
 **Service is basic auth protected:**   
 Credentials (username:password format):  
 -   user:password  
