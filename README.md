@@ -29,7 +29,7 @@ Credentials (username:password format):
 -   user:password  
 -   admin:admin  
      
-**Actuator enable for monitoring and tracing: **    
+**Actuator enable for monitoring and tracing:**    
 http://localhost:8080/plangeneratorservice/v1/actuator  
 
 This url will list all services available from actuator.
