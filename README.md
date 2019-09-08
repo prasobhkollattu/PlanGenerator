@@ -43,9 +43,11 @@ http://localhost:8080/plangeneratorservice/v1/actuator  : This url will list all
 **Imp Actuator URLs:**   
 http://localhost:8080/plangeneratorservice/v1/actuator/health    
 http://localhost:8080/plangeneratorservice/v1/actuator/httptrace  
-http://localhost:8080/plangeneratorservice/v1/actuator/metrics  
-http://localhost:8080/plangeneratorservice/v1/actuator/beans  
+http://localhost:8080/plangeneratorservice/v1/actuator/info    
+http://localhost:8080/plangeneratorservice/v1/actuator/loggers   
+http://localhost:8080/plangeneratorservice/v1/actuator/metrics   
 http://localhost:8080/plangeneratorservice/v1/actuator/threaddump  
+http://localhost:8080/plangeneratorservice/v1/actuator/auditevents  
 
 **Caching is enabled, so same request will be processed from cache.**  
 http://localhost:8080/plangeneratorservice/v1/actuator/caches  
