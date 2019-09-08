@@ -22,13 +22,16 @@ How to run the project?
       -    **docker run -p 8080:8080 plangenerator**  
       
 Service URL :  
-http://localhost:8080/v1/generate-plan  
+http://localhost:8080/plangeneratorservice/v1/generate-plan  
 
 **Service is basic auth protected:**   
 Credentials (username:password format):  
 -   user:password  
 -   admin:admin  
      
+**Actuator enable for monitoring and tracing: **    
+http://localhost:8080/plangeneratorservice/v1/actuator  
 
+This url will list all services available from actuator.
 
 
