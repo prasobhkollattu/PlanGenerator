@@ -1,13 +1,13 @@
 swagger: '2.0'
 info:
-  description: In order to inform borrowers about the final repayment schedule, thi serviuce will doe pre-calculated repayment plans throughout the lifetime of a loan  This spec defines the ` PlanGeneratorService`. Consumers  should statisfy service contract to access the APIs.Please refer <b>request</b> and <b>response</b> section of each service to identify the contract. Also clients need to send `Basic auth` for authentication
+  description: In order to inform borrowers about the final repayment schedule, thi service will doe pre-calculated repayment plans throughout the lifetime of a loan  This spec defines the ` PlanGeneratorService`. Consumers  should statisfy service contract to access the APIs.Please refer <b>request</b> and <b>response</b> section of each service to identify the contract. Also clients need to send `Basic auth` for authentication
   version: 1.0.0
-  title: PlanGenerator
-  termsOfService: http://lendico.io/terms/
+  title: PlanGeneratorService
+  termsOfService: http://company.io/terms/
   contact:
-    email: info@lendico.com
-host: localhost
-basePath: /v1
+    email: info@company.com
+host: localhost:8080
+basePath: /plangeneratorservice/v1
 tags:
 - name: PlanGenerator
   description: Services to pre-calculate repayment plans throughout the lifetime of a loan
@@ -17,8 +17,8 @@ tags:
 - name: plan
   description: plan generator
 schemes:
-- https
 - http
+- https
 paths:
   /generate-plan:
     post:

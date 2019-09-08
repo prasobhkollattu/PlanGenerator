@@ -1,4 +1,4 @@
-package com.company.plangenerator.contollers.security;
+package com.company.plangenerator.contollers.filter;
 
 import java.io.IOException;
 

@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.company.plangenerator.apis.GeneratePlanApi;
+import com.company.plangenerator.contollers.util.RequestValidationUtil;
 import com.company.plangenerator.models.LoanDetails;
 import com.company.plangenerator.models.RepaymentPlans;
 import com.company.plangenerator.services.PlanGeneratorService;
@@ -27,6 +28,7 @@ public class PlansController implements GeneratePlanApi {
 	@Override
 	public ResponseEntity<RepaymentPlans> preCalculateRepaymentPlans(@Valid LoanDetails loanDetails) {
 		System.out.println(loanDetails);
+		RequestValidationUtil.validdateLoanDetails(loanDetails);
 		return new ResponseEntity<RepaymentPlans>(planGeneratorService.getRepaymentPlans(loanDetails), HttpStatus.OK);
 	}
 

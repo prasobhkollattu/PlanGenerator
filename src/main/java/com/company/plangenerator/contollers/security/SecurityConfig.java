@@ -33,8 +33,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
-		http.httpBasic().and().authorizeRequests().antMatchers("generate-plan").hasAnyRole("ADMIN", "USER").anyRequest()
-				.authenticated();
 
 		http.csrf().disable().authorizeRequests().antMatchers("/generate-plan").hasAnyRole("ADMIN", "USER").and()
 				.httpBasic().realmName(REALM).authenticationEntryPoint(getBasicAuthEntryPoint()).and()
