@@ -9,6 +9,7 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import com.company.plangenerator.models.LoanDetails;
@@ -27,6 +28,13 @@ public class PlanGeneratorService {
 
 	Logger logger = LoggerFactory.getLogger(PlanGeneratorService.class);
 
+	/**
+	 * enabled caching
+	 * 
+	 * @param loanDetails
+	 * @return
+	 */
+	@Cacheable("loanDetails")
 	public RepaymentPlans getRepaymentPlans(LoanDetails loanDetails) {
 		return generateRepaymentPlans(loanDetails);
 	}
@@ -59,9 +67,9 @@ public class PlanGeneratorService {
 			repaymentPlan.setInitialOutstandingPrincipal(roundVal(loanAmount));
 			repaymentPlan.setDate(paymentDate);
 			final double futureValue = calculateFutureValueOfTheLoanAmount(loanAmount, nominalRate / Constants.HUNDRED,
-					loanDetails.getDuration());
+					loanDuration);
 			final double presentValue = calculatePresentValueOfLoanAmount(futureValue, nominalRate / Constants.HUNDRED,
-					loanDetails.getDuration());
+					loanDuration);
 
 			logger.debug("presentValue  " + presentValue);
 
