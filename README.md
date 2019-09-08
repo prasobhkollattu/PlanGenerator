@@ -36,7 +36,20 @@ Credentials (username:password format):
 **Actuator enable for monitoring and tracing:**    
 Credentials (username:password format):    
 -   admin:admin  
-http://localhost:8080/plangeneratorservice/v1/actuator  
+
+
+http://localhost:8080/plangeneratorservice/v1/actuator
+
+Imp URLs:  
+http://localhost:8080/plangeneratorservice/v1/actuator/health    
+http://localhost:8080/plangeneratorservice/v1/actuator/httptrace  
+http://localhost:8080/plangeneratorservice/v1/actuator/metrics  
+http://localhost:8080/plangeneratorservice/v1/actuator/beans  
+http://localhost:8080/plangeneratorservice/v1/actuator/threaddump  
+http://localhost:8080/plangeneratorservice/v1/actuator/caches  
+
+
+
 
 This url will list all services available from actuator.
 
