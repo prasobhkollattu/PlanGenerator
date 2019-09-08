@@ -30,11 +30,12 @@ If we have some major changes and need to support both old and new service this 
 
 
 **Service is basic auth protected:**   
-Credentials (username:password format):  
--   user:password  
--   admin:admin  
+Credentials (username:password format):    
+-   user:password     
      
 **Actuator enable for monitoring and tracing:**    
+Credentials (username:password format):    
+-   admin:admin  
 http://localhost:8080/plangeneratorservice/v1/actuator  
 
 This url will list all services available from actuator.
