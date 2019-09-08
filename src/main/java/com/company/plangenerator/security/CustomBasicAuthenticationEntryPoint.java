@@ -1,4 +1,4 @@
-package com.company.plangenerator.contollers.security;
+package com.company.plangenerator.security;
 
 import java.io.IOException;
 import java.io.PrintWriter;

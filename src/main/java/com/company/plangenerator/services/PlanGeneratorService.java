@@ -11,10 +11,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.company.plangenerator.contollers.util.Constants;
 import com.company.plangenerator.models.LoanDetails;
 import com.company.plangenerator.models.RepaymentPlan;
 import com.company.plangenerator.models.RepaymentPlans;
+import com.company.plangenerator.utils.Constants;
 
 /**
  * Service to handle PlanGenerator

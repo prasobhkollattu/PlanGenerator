@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.company.plangenerator.contollers.util.Messages;
 import com.company.plangenerator.exceptions.PlanGeneratorException;
 import com.company.plangenerator.exceptions.models.ExceptionResponse;
+import com.company.plangenerator.utils.Messages;
 
 /**
  * 

@@ -1,4 +1,4 @@
-package com.company.plangenerator.contollers.util;
+package com.company.plangenerator.utils;
 
 public interface Constants {
 	int NO_OF_DAYS_IN_A_MONTH = 30;

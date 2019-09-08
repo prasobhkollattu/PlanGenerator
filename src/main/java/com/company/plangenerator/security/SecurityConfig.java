@@ -1,4 +1,4 @@
-package com.company.plangenerator.contollers.security;
+package com.company.plangenerator.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -33,11 +33,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
-
-		http.csrf().disable().authorizeRequests().antMatchers("/generate-plan").hasAnyRole("ADMIN", "USER").and()
-				.httpBasic().realmName(REALM).authenticationEntryPoint(getBasicAuthEntryPoint()).and()
-				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);// We don't need sessions to
-																							// be created.
+		http.csrf().disable().authorizeRequests().antMatchers("/generate-plan").hasRole("USER").antMatchers("/actuator**","/actuator/**")
+				.hasRole("ADMIN").and().httpBasic().realmName(REALM).authenticationEntryPoint(getBasicAuthEntryPoint())
+				.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);// We don't need
+																									// sessions to
+																									// be created.
 
 	}
 

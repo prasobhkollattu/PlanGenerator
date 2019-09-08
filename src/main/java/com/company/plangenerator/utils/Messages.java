@@ -1,4 +1,4 @@
-package com.company.plangenerator.contollers.util;
+package com.company.plangenerator.utils;
 
 /**
  * Application messages
