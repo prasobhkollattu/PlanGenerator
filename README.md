@@ -7,7 +7,7 @@ Please import or copy paste yaml to Swagger online IDE to see the spec.
 
 **Swagger** : https://editor.swagger.io/    
 
-Swagger YAML is integerataed to maven build process using swagger-codegen-maven-plugin and it will automatically generate the interfaces and models need for the service.      
+Swagger YAML is integerataed to maven build process using **swagger-codegen-maven-plugin** and it will automatically generate the interfaces and models need for the service.      
 
 
 ### How to run the project?    
