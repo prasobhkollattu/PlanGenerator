@@ -1,4 +1,4 @@
-# PlanGeneratorService :ledger
+# PlanGeneratorService :ledger:  
 
 This service can be used to pre-calculated repayment plans throughout the lifetime of a loan.  Its created using **Maven**,**SpringBoot** and **Java 8**.  
 
