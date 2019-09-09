@@ -19,10 +19,10 @@ Swagger YAML is integerataed to maven build process using swagger-codegen-maven-
 - **Run using docker**  
    -  Install Maven 3.6.2  
    -  Install docker
-   -  Open command prompt and navigate to clone directory and Execute commands 
+   -  Open command prompt and navigate to clone directory and Execute commands:  
       -  **mvn install**  
       -  **docker build -f Dockerfile -t plangenerator .**  
-   -  **docker run -p 8080:8080 plangenerator**  
+      -  **docker run -p 8080:8080 plangenerator**  
       
 Service URL :  
 http://localhost:8080/plangeneratorservice/v1/generate-plan  
